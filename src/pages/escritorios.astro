@@ -1,0 +1,33 @@
+---
+import CategoryPage from "../components/CategoryPage.astro";
+import { products } from "../data/products";
+
+const escritorios = products.filter((p) => p.type === "escritorio");
+---
+
+<CategoryPage
+  type="escritorio"
+  path="/escritorios/"
+  title="Escritorios para Oficina y Gaming en Chile: Elevables y Fijos"
+  metaDescription="Compara escritorios elevables eléctricos y escritorios gamer disponibles en Mercado Libre Chile: FlexiSpot, Primus, Xtrike Me y más. Precios en CLP y ficha técnica completa."
+  h1="Escritorios para oficina y gaming"
+  intro={[
+    "Un buen escritorio es la base de cualquier setup: define cuánto espacio tienes para monitores y periféricos, y si puedes alternar entre sentado y de pie durante la jornada. Comparamos desde escritorios fijos económicos hasta escritorios elevables eléctricos de doble motor.",
+    "Si trabajas muchas horas seguidas, un escritorio elevable permite alternar posturas y reduce la fatiga acumulada; si el presupuesto es limitado o el espacio es reducido, un escritorio fijo bien dimensionado sigue siendo una opción sólida.",
+  ]}
+  faqs={[
+    {
+      q: "¿Vale la pena un escritorio elevable eléctrico?",
+      a: "Si pasas más de 6 horas diarias en el escritorio, alternar entre sentado y de pie ayuda a reducir la fatiga lumbar acumulada. Si tu jornada es más corta o ya usas pausas activas frecuentes, un escritorio fijo de calidad puede ser suficiente.",
+    },
+    {
+      q: "¿Qué tamaño de escritorio necesito para dos monitores?",
+      a: "Para dos monitores estándar de 24\", una superficie de al menos 140 cm de ancho suele ser cómoda. Si usas un monitor ultrapanorámico, 120 cm pueden ser suficientes.",
+    },
+    {
+      q: "¿Qué diferencia hay entre motor simple y doble motor en los elevables?",
+      a: "El doble motor (uno por pata) ofrece elevación más rápida, estable y con mayor capacidad de carga, especialmente con el escritorio cargado de monitores. El motor simple es más económico pero algo más lento y con menor capacidad de carga.",
+    },
+  ]}
+  products={escritorios}
+/>

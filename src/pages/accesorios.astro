@@ -1,0 +1,33 @@
+---
+import CategoryPage from "../components/CategoryPage.astro";
+import { products } from "../data/products";
+
+const accesorios = products.filter((p) => p.type === "accesorio");
+---
+
+<CategoryPage
+  type="accesorio"
+  path="/accesorios/"
+  title="Accesorios de Oficina y Ergonomía en Chile: Comparativa y Precios"
+  metaDescription="Compara soportes de monitor, teclados y mouse ergonómicos, reposapiés y organizadores de cables disponibles en Mercado Libre Chile. Precios en CLP."
+  h1="Accesorios de oficina y ergonomía"
+  intro={[
+    "Muchas veces el mayor salto de comodidad no viene de cambiar la silla o el escritorio, sino de sumar los accesorios correctos: un brazo de monitor, un teclado ergonómico o un simple reposapiés. Son mejoras de bajo costo con alto impacto en la postura diaria.",
+    "Aquí comparamos los accesorios más útiles para completar un setup de oficina o gaming, con foco en compatibilidad y en qué problema concreto resuelve cada uno.",
+  ]}
+  faqs={[
+    {
+      q: "¿Qué accesorio conviene comprar primero?",
+      a: "Si tu monitor está muy bajo o muy cerca, un brazo articulado suele dar el mayor salto de comodidad por el precio. Si notas molestias en las piernas o mala circulación, un reposapiés es la mejora más económica.",
+    },
+    {
+      q: "¿Vale la pena un teclado o mouse ergonómico?",
+      a: "Si sientes tensión en muñecas o antebrazo tras varias horas de uso, sí: reducen notablemente la rotación forzada de la muñeca. Tienen una curva de adaptación de una a dos semanas.",
+    },
+    {
+      q: "¿Los brazos de monitor son compatibles con cualquier pantalla?",
+      a: "Solo si tu monitor tiene soporte VESA (los agujeros de montaje estándar en la parte trasera, normalmente 75x75 o 100x100 mm). Revisa la ficha técnica de tu monitor antes de comprar.",
+    },
+  ]}
+  products={accesorios}
+/>

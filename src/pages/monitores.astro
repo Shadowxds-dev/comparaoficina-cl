@@ -1,0 +1,33 @@
+---
+import CategoryPage from "../components/CategoryPage.astro";
+import { products } from "../data/products";
+
+const monitores = products.filter((p) => p.type === "monitor");
+---
+
+<CategoryPage
+  type="monitor"
+  path="/monitores/"
+  title="Mejores Monitores para Oficina y Gaming en Chile: Comparativa"
+  metaDescription="Comparamos monitores LG, Samsung, AOC, Xiaomi y ViewSonic disponibles en Mercado Libre Chile: resolución, tasa de refresco y precio en CLP para productividad y gaming."
+  h1="Monitores para oficina y gaming"
+  intro={[
+    "El monitor es el componente que más tiempo miras en cualquier setup, y sin embargo suele ser el último en actualizarse. Comparamos monitores para productividad, diseño y gaming disponibles en Mercado Libre Chile, desde opciones Full HD económicas hasta paneles 4K y ultrapanorámicos.",
+    "La elección depende del uso: para oficina y multitarea, prioriza tamaño y resolución (o formato panorámico); para gaming, la tasa de refresco y el tiempo de respuesta importan más que la resolución máxima.",
+  ]}
+  faqs={[
+    {
+      q: "¿Qué resolución conviene para trabajo de oficina?",
+      a: "Full HD (1920x1080) es suficiente para tareas de ofimática en pantallas de hasta 24\". A partir de 27\" conviene subir a QHD (2560x1440) para que el texto no se vea pixelado.",
+    },
+    {
+      q: "¿Qué tasa de refresco necesito para gaming?",
+      a: "144Hz es el estándar recomendado para gaming competitivo; 165Hz da un margen extra en juegos más ligeros. Para juegos casuales o de un jugador, 75-100Hz ya se nota más fluido que los 60Hz estándar.",
+    },
+    {
+      q: "¿Panel IPS o VA?",
+      a: "IPS ofrece mejores colores y ángulos de visión, ideal para diseño y oficina. VA suele tener mejor contraste y es más común en monitores curvos gaming, aunque con peores ángulos de visión.",
+    },
+  ]}
+  products={monitores}
+/>

@@ -1,0 +1,33 @@
+---
+import CategoryPage from "../components/CategoryPage.astro";
+import { products } from "../data/products";
+
+const sillas = products.filter((p) => p.type === "silla");
+---
+
+<CategoryPage
+  type="silla"
+  path="/sillas/"
+  title="Mejores Sillas Ergonómicas en Chile 2026: Comparativa y Precios"
+  metaDescription="Comparamos sillas ergonómicas y gaming disponibles en Mercado Libre Chile: VIDITA, Homer Design, Ergohuman, Primus y más. Precios en CLP, soporte lumbar y ficha técnica completa."
+  h1="Sillas ergonómicas y gaming"
+  intro={[
+    "Pasar 8 horas o más al día sentado sin una silla adecuada es una de las causas más comunes de dolor lumbar y de cuello en el teletrabajo. Comparamos sillas ergonómicas y gaming disponibles en Mercado Libre Chile, desde opciones económicas hasta modelos premium con soporte lumbar dinámico.",
+    "Fíjate especialmente en el tipo de soporte lumbar (fijo, regulable o dinámico), el rango de reclinación y la capacidad de peso antes de decidir. Si dudas entre dos modelos, usa nuestro comparador para verlos lado a lado.",
+  ]}
+  faqs={[
+    {
+      q: "¿Cuánto debería gastar en una silla ergonómica para teletrabajo?",
+      a: "Para uso diario de 6-8 horas, lo recomendable es no bajar de los $130.000-150.000 CLP: por debajo de ese rango es difícil encontrar soporte lumbar realmente ajustable. Si el presupuesto es limitado, prioriza el soporte lumbar sobre otros extras como los reposabrazos 4D.",
+    },
+    {
+      q: "¿Silla ergonómica o silla gaming para trabajar?",
+      a: "Las sillas gaming suelen priorizar reclinación amplia y estética sobre ajuste lumbar fino, mientras que las ergonómicas priorizan la postura de trabajo. Si usas la silla más de 6 horas diarias para trabajar, una ergonómica con soporte lumbar regulable suele ser mejor inversión a largo plazo.",
+    },
+    {
+      q: "¿Qué capacidad de peso debo revisar?",
+      a: "Elige una silla cuya capacidad de peso máxima supere tu peso corporal en al menos un 20-30%, ya que los mecanismos duran más cuando no trabajan al límite de su capacidad.",
+    },
+  ]}
+  products={sillas}
+/>
